@@ -1,4 +1,5 @@
-const io = require("socket.io")(8099);
+require('dotenv').config()
+const io = require("socket.io")(process.env.DTS_SOC_PORT);
 
 class CMySoc {
     constructor() {

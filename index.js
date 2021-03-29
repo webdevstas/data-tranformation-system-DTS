@@ -1,4 +1,5 @@
-const dsServer = require("socket.io-client")('ws://localhost:8100')
+require('dotenv').config()
+const dsServer = require("socket.io-client")(process.env.DS_ADDR)
 const dssClient = require('./providers/socket')
 const {prepareData} = require('./handlers/goodsHandler')
 

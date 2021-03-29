@@ -1,7 +1,6 @@
 function prepareData(incomeData) {
-    let date = new Date()
     let result = incomeData
-    result.date = date
+    result.date = new Date()
     result.total = computeTotalPrice(incomeData.goods)
     return result
 }
