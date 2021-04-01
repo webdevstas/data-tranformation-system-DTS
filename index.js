@@ -6,6 +6,10 @@ const dssClient = new CSocServer(process.env.DTS_SOC_PORT, 'DSS-Client')
 const {prepareData} = require('./lib/handlers/goodsHandler')
 
 dsServer.on('message',function(data){
-    console.log(prepareData(data))
+    try {
+        console.log(prepareData(data))
+    } catch (err) {
+        console.log(err)
+    }
 })
 
