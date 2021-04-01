@@ -9,7 +9,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node index.js",
+    "start": "pm2-runtime index.js",
     "dev": "nodemon index.js"
   },
   "author": "Stanislav Spirin",
