@@ -9,7 +9,7 @@ dsServer.on('message',function(data){
     try {
         console.log(prepareData(data))
     } catch (err) {
-        console.log(err)
+        console.log(err.message)
     }
 })
 
