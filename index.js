@@ -7,7 +7,8 @@ const {prepareData} = require('./lib/handlers/goodsHandler')
 
 dsServer.on('message',function(data){
     try {
-        console.log(prepareData(data))
+        dssClient.sendMessage(prepareData(data))
+        console.log(`Message success provided to ${dssClient.name}.`)
     } catch (err) {
         console.log(err.message)
     }
